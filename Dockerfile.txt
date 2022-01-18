@@ -1,0 +1,7 @@
+FROM node
+WORKDIR D:\Intel\Desktop\BOOTCAMP\Kubernetes\Temperatura\conversao-temperatura\src
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 8080
+CMD ["node" server.js]
